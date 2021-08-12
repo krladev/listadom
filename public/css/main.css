@@ -6128,8 +6128,50 @@ h1 {
   font-size: 2.5rem;
 }
 
-.banner img {
-  width: 100%;
+html {
+  background: url(/assets/app/list-a-dom-bg.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.container {
+  margin: 1rem 0rem;
+  align-content: space-between;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+}
+
+.section-main {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 0.5rem;
+  margin: auto;
+  padding: 1rem 0rem;
+}
+
+.section-cta {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.btn-cta {
+  background-color: #d16c58;
+  border-radius: 0.5rem;
+  border: 3px solid #1a1f32;
+  color: #1a1f32;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.btn-cta:hover {
+  background-color: #d16c58;
+  border: 3px solid #ffffff;
+  color: #ffffff;
 }
 
 .quote {
@@ -6138,18 +6180,16 @@ h1 {
 
 .card-buy-step {
   border-radius: 0.5rem;
-  border: 1px solid #cccccc;
+  background-color: #1a1f32;
+  color: #ffffff;
   margin: 1rem 0.5rem;
   padding: 1rem;
   min-height: 9rem;
   text-align: center;
 }
 
-.card-buy-step:hover {
-  background-color: #f0f0f0;
-}
-
 .card-buy-step i {
   margin-bottom: 1rem;
   font-size: 4rem;
+  color: #ffffff;
 }
