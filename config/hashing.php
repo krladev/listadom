@@ -49,4 +49,6 @@ return [
         'time' => 2,
     ],
 
+    'token_name' => ENV('APP_TOKEN_NAME', 'default')
+
 ];
