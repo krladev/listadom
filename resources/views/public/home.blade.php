@@ -2,7 +2,7 @@
 @section('title', 'Home')
 
 @section('content')
-    <div class="md:container md:mx-auto">
+    <div class="md:container md:mx-auto page-home">
         <div class="section-main">
             <h1 class="text-center mt-4">List-A-Dom</h1>
 
@@ -39,9 +39,12 @@
             </div>
         </div>
         <div class="section-cta">
-            <button class="btn-cta">
+            <a class="btn-cta btn-center btn-primary btn-primary-large" href="/register">
                 Get Started
-            </button>
+            </a>
+            <a class="btn-cta btn-center btn-secondary" href="/login">
+                or login
+            </a>
         </div>
     </div>
 @endsection

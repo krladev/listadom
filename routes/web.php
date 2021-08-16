@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers;
+use App\Http\Controllers\WebController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,4 +14,7 @@ use App\Http\Controllers;
 |
 */
 
-Route::get('/', [Controllers\WebController::class, 'home']);
+Route::get('/', [WebController::class, 'home']);
+Route::get('/login', [WebController::class, 'login']);
+Route::get('/register', [WebController::class, 'register']);
+Route::get('/forgot', [WebController::class, 'forgot']);
