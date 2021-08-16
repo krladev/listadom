@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-class MainController extends Controller
+class WebController extends Controller
 {
     public function home(){
         return view('public/home');
-    }    
+    }
 }
