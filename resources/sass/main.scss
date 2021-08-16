@@ -35,24 +35,47 @@ body {
 }
 
 .section-cta {
+    display: flex;
+    flex-direction: column;
     margin-top: 2rem;
     text-align: center;
 }
 
 .btn-cta {
-    background-color: #d16c58;
     border-radius: 0.5rem;
-    border: 3px solid #1a1f32;
-    color: #1a1f32;
+    display: inline;
+    font-size: 1rem;
     font-weight: bold;
-    font-size: 1.5rem;
-    padding: 0.5rem 1rem;
-}
+    padding: 0.25rem 0.5rem;
 
-.btn-cta:hover {
-    background-color: #d16c58;
-    border: 3px solid #ffffff;
-    color: #ffffff;
+    &.btn-center {
+        margin: 0 auto 1.5rem auto;
+    }
+
+    &.btn-primary {
+        background-color: #d16c58;
+        border: 3px solid #1a1f32;
+        color: #1a1f32;
+        &-large {
+            font-size: 1.5rem;
+            padding: 0.5rem 1rem;
+        }
+        &:hover {
+            background-color: #d16c58;
+            border: 3px solid #ffffff;
+            color: #ffffff;
+        }
+    }
+    &.btn-secondary {
+        background-color: rgba(0, 0, 0, 0.75);
+        border: 3px solid #c6c6c6;
+        color: #c6c6c6;
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 3px solid #ffffff;
+            color: #ffffff;
+        }
+    }
 }
 
 .quote {
