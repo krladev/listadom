@@ -3,7 +3,8 @@ require('./bootstrap');
 import $ from 'jquery';
 window.$ = window.jQuery = $;
 
-require('./makeRequest');
+require('./lib/makeRequest');
+require('./lib/storeCredentials');
 // imports end
 
 $(function(){
@@ -13,6 +14,8 @@ $(function(){
 
     $('body').on('submit', '#form-login', function(e) {
         e.preventDefault();
+
+        $('#error-message').html('');
 
         const email = $('#email').val();
         const password = $('#password').val();
@@ -26,15 +29,14 @@ $(function(){
             },
             'actions': {
                 'success': function(response){
-                    console.log(response);
-                    alert('success');
+                    storeCredentials(response);
+                    window.location.href = '/dashboard';
                 },
                 'fail': function(response){
-                    console.log(response);
-                    alert('failed');
+                    $('#error-message').html('Invalid credentials, please try again');
                 }
             }
-        })
+        });
     });
 
 
