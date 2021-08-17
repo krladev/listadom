@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\CookieAuthUser;
+
+
 class WebController extends Controller
 {
     public function home(){
@@ -18,5 +21,17 @@ class WebController extends Controller
 
     public function forgot(){
         return view('public.auth.forgot');
+    }
+
+    public function dashboard(CookieAuthUser $cookieAuth){
+        if(!$cookieAuth->getUser()){
+            return redirect('login');
+        }
+
+        $data = [
+            'auth' => true,
+        ];
+
+        return view('dashboard.home', $data);
     }
 }
