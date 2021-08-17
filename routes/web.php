@@ -15,6 +15,8 @@ use App\Http\Controllers\WebController;
 */
 
 Route::get('/', [WebController::class, 'home']);
-Route::get('/login', [WebController::class, 'login']);
+Route::get('/login', [WebController::class, 'login'])->name('login');
 Route::get('/register', [WebController::class, 'register']);
 Route::get('/forgot', [WebController::class, 'forgot']);
+
+Route::get('/dashboard', [WebController::class, 'dashboard']);
