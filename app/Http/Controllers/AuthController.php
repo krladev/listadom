@@ -41,24 +41,25 @@ class AuthController extends Controller
         ]);
 
         $user = User::where('email', $fields['email'])->first();
-        if(Hash::check($fields['password'], $user->password)){
-            $token = $user->createToken(Config::get('hashing.token_name'))->plainTextToken;
+        if($user){
+            if(Hash::check($fields['password'], $user->password)){
+                $token = $user->createToken(Config::get('hashing.token_name'))->plainTextToken;
 
-            $response = [
-                'user' => $user,
-                'token' => $token
-            ];
+                $response = [
+                    'user' => $user,
+                    'token' => $token
+                ];
 
-            return response($response, 200);
+                return response($response, 200);
+            }
         }
-        else{
-            $response = [
-                'success' => false,
-                'message' => 'Invalid credentials',
-            ];
 
-            return response($response, 401);
-        }
+        $response = [
+            'success' => false,
+            'message' => 'Invalid credentials',
+        ];
+
+        return response($response, 401);
     }
 
     public function logout(Request $request){
