@@ -19,7 +19,7 @@
                 {{-- <p class="text-red-500 text-xs italic">Please choose a password.</p> --}}
             </div>
             <div class="flex items-center justify-between">
-                <button class="btn-cta btn-primary" type="button">
+                <button class="btn-cta btn-primary" type="submit">
                 Sign In
                 </button>
                 <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="/forgot">

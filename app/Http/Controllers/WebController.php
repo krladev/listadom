@@ -9,11 +9,14 @@ class WebController extends Controller
     }
 
     public function login(){
-        return view('public.login');
+        return view('public.auth.login');
     }
 
     public function register(){
-        return view('public.register');
+        return view('public.auth.register');
     }
 
+    public function forgot(){
+        return view('public.auth.forgot');
+    }
 }
