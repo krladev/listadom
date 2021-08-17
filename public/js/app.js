@@ -1848,8 +1848,36 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 window.$ = window.jQuery = (jquery__WEBPACK_IMPORTED_MODULE_0___default());
-jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {// $('body').on('click', '.page-home .btn-primary', function() {
+
+__webpack_require__(/*! ./makeRequest */ "./resources/js/makeRequest.js"); // imports end
+
+
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
+  // $('body').on('click', '.page-home .btn-primary', function() {
   // });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').on('submit', '#form-login', function (e) {
+    e.preventDefault();
+    var email = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#email').val();
+    var password = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#password').val();
+    makeRequest({
+      'url': '/api/login',
+      'verb': 'POST',
+      'data': {
+        'email': email,
+        'password': password
+      },
+      'actions': {
+        'success': function success(response) {
+          console.log(response);
+          alert('success');
+        },
+        'fail': function fail(response) {
+          console.log(response);
+          alert('failed');
+        }
+      }
+    });
+  });
 });
 
 /***/ }),
@@ -1882,6 +1910,48 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/makeRequest.js":
+/*!*************************************!*\
+  !*** ./resources/js/makeRequest.js ***!
+  \*************************************/
+/***/ (() => {
+
+window.makeRequest = function (data) {
+  var authToken = function authToken() {
+    return localStorage.getItem('user-token');
+  };
+
+  var request = $.extend({}, {
+    method: data.verb,
+    url: data.url,
+    data: data.data ? JSON.stringify(data.data) : undefined,
+    dataType: data.dataType ? data.dataType : 'json',
+    contentType: 'application/json; charset=utf-8',
+    headers: data.headers ? data.headers : undefined,
+    beforeSend: function beforeSend(xhr) {
+      xhr.setRequestHeader('Accept', 'application/json');
+    } // beforeSend: authToken() !== null ? (function (xhr) {
+    //     xhr.setRequestHeader('Authorization', 'Bearer ' + authToken());
+    // }):undefined,
+
+  });
+  $.ajax(request).done(function () {
+    if (data.actions && data.actions.success) {
+      data.actions.success();
+    }
+  }).fail(function () {
+    if (data.actions && data.actions.fail) {
+      data.actions.fail();
+    }
+  }).always(function () {
+    if (data.actions && data.actions.always) {
+      data.actions.always();
+    }
+  });
+};
 
 /***/ }),
 
