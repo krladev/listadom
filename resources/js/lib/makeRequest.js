@@ -22,23 +22,23 @@ window.makeRequest = (data) => {
 
     $.ajax(request)
         .done(
-            function(){
+            function(response){
                 if(data.actions && data.actions.success){
-                    data.actions.success();
+                    data.actions.success(response);
                 }
             }
         )
         .fail(
-            function(){
+            function(response){
                 if(data.actions && data.actions.fail){
-                    data.actions.fail();
+                    data.actions.fail(response);
                 }
             }
         )
         .always(
-            function(){
+            function(response){
                 if(data.actions && data.actions.always){
-                    data.actions.always();
+                    data.actions.always(response);
                 }
             }
         );
