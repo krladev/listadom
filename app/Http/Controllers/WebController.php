@@ -23,7 +23,7 @@ class WebController extends Controller
         return view('public.auth.forgot');
     }
 
-    public function dashboard(CookieAuthUser $cookieAuth){
+    public function dash(CookieAuthUser $cookieAuth){
         if(!$cookieAuth->getUser()){
             return redirect('login');
         }
@@ -32,6 +32,6 @@ class WebController extends Controller
             'auth' => true,
         ];
 
-        return view('dashboard.home', $data);
+        return view('dash.home', $data);
     }
 }

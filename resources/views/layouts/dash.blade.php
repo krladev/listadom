@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/css/app.css" rel="stylesheet">
     <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/dash.css" rel="stylesheet">
     <script src="/js/app.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +16,7 @@
     <title>{{ config('app.name') }} - @yield('title')</title>
 </head>
 <body>
-    <div class="container">
+    <div class="main-container">
         @yield('content')
     </div>
 </body>

@@ -19,4 +19,4 @@ Route::get('/login', [WebController::class, 'login'])->name('login');
 Route::get('/register', [WebController::class, 'register']);
 Route::get('/forgot', [WebController::class, 'forgot']);
 
-Route::get('/dashboard', [WebController::class, 'dashboard']);
+Route::get('/dash', [WebController::class, 'dash']);
