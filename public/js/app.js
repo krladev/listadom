@@ -1872,7 +1872,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
       'actions': {
         'success': function success(response) {
           storeCredentials(response);
-          window.location.href = '/dashboard';
+          window.location.href = '/dash';
         },
         'fail': function fail(response) {
           jquery__WEBPACK_IMPORTED_MODULE_0___default()('#error-message').html('Invalid credentials, please try again');
@@ -30092,6 +30092,32 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/sass/public.scss":
+/*!************************************!*\
+  !*** ./resources/sass/public.scss ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./resources/sass/dash.scss":
+/*!**********************************!*\
+  !*** ./resources/sass/dash.scss ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./resources/css/app.css":
 /*!*******************************!*\
   !*** ./resources/css/app.css ***!
@@ -30586,6 +30612,8 @@ var api = init(defaultConverter, { path: '/' });
 /******/ 		var installedChunks = {
 /******/ 			"/js/app": 0,
 /******/ 			"css/app": 0,
+/******/ 			"css/dash": 0,
+/******/ 			"css/public": 0,
 /******/ 			"css/main": 0
 /******/ 		};
 /******/ 		
@@ -30634,9 +30662,11 @@ var api = init(defaultConverter, { path: '/' });
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/main"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/main"], () => (__webpack_require__("./resources/sass/main.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app","css/main"], () => (__webpack_require__("./resources/css/app.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/dash","css/public","css/main"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/dash","css/public","css/main"], () => (__webpack_require__("./resources/sass/main.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/dash","css/public","css/main"], () => (__webpack_require__("./resources/sass/public.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/dash","css/public","css/main"], () => (__webpack_require__("./resources/sass/dash.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app","css/dash","css/public","css/main"], () => (__webpack_require__("./resources/css/app.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

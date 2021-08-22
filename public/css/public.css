@@ -1,0 +1,84 @@
+h1 {
+  font-size: 2.5rem;
+}
+
+html {
+  background: url(/assets/app/list-a-dom-bg.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.container {
+  align-content: space-between;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+}
+
+.section-main {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 0.5rem;
+  margin: auto;
+}
+
+.section-cta {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.btn-cta {
+  border-radius: 0.5rem;
+  display: inline;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.25rem 0.5rem;
+}
+.btn-cta.btn-center {
+  margin: 0 auto 1.5rem auto;
+}
+.btn-cta.btn-primary {
+  background-color: #d16c58;
+  border: 3px solid #1a1f32;
+  color: #1a1f32;
+}
+.btn-cta.btn-primary-large {
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+}
+.btn-cta.btn-primary:hover {
+  background-color: #d16c58;
+  border: 3px solid #ffffff;
+  color: #ffffff;
+}
+.btn-cta.btn-secondary {
+  background-color: rgba(0, 0, 0, 0.75);
+  border: 3px solid #c6c6c6;
+  color: #c6c6c6;
+}
+.btn-cta.btn-secondary:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 3px solid #ffffff;
+  color: #ffffff;
+}
+
+.quote {
+  font-size: 1.5rem;
+}
+
+.card-buy-step {
+  border-radius: 0.5rem;
+  background-color: #1a1f32;
+  color: #ffffff;
+  margin: 1rem 0.5rem;
+  padding: 1rem;
+  min-height: 9rem;
+  text-align: center;
+}
+
+.card-buy-step i {
+  margin-bottom: 1rem;
+  font-size: 4rem;
+  color: #ffffff;
+}

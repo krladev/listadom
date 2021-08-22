@@ -30,7 +30,7 @@ $(function(){
             'actions': {
                 'success': function(response){
                     storeCredentials(response);
-                    window.location.href = '/dashboard';
+                    window.location.href = '/dash';
                 },
                 'fail': function(response){
                     $('#error-message').html('Invalid credentials, please try again');
