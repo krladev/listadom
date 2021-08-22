@@ -1855,8 +1855,6 @@ __webpack_require__(/*! ./lib/storeCredentials */ "./resources/js/lib/storeCrede
 
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
-  // $('body').on('click', '.page-home .btn-primary', function() {
-  // });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').on('submit', '#form-login', function (e) {
     e.preventDefault();
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('#error-message').html('');
@@ -1879,6 +1877,9 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
         }
       }
     });
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').on('click', '.dash-logo', function () {
+    window.location.href = '/dash';
   });
 });
 

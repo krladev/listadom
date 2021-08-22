@@ -8,10 +8,6 @@ require('./lib/storeCredentials');
 // imports end
 
 $(function(){
-    // $('body').on('click', '.page-home .btn-primary', function() {
-
-    // });
-
     $('body').on('submit', '#form-login', function(e) {
         e.preventDefault();
 
@@ -39,5 +35,7 @@ $(function(){
         });
     });
 
-
+    $('body').on('click', '.dash-logo', function() {
+        window.location.href = '/dash';
+    });
 });

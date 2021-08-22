@@ -17,7 +17,11 @@
 </head>
 <body>
     <div class="main-container">
-        @yield('content')
+        @include('../components/dash/nav')
+
+        <section class="content">
+            @yield('content')
+        </section>
     </div>
 </body>
 </html>

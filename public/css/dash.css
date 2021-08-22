@@ -1,1 +1,45 @@
+.main-container {
+  display: flex;
+  flex-direction: row;
+}
 
+.dash-logo {
+  cursor: pointer;
+  padding: 0.5rem 0 2rem 0.5rem;
+}
+
+.nav {
+  background: #010009;
+  background: linear-gradient(1800deg, #010009 0%, #090979 51%, #0f3b95 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 9rem;
+  height: 100vh;
+}
+.nav ul {
+  display: flex;
+  flex-direction: column;
+}
+.nav ul li {
+  height: 3.5rem;
+  font-size: 1rem;
+  color: #ffffff;
+  text-align: left;
+  padding-top: 0.5rem;
+  padding-left: 1rem;
+}
+.nav ul a:hover {
+  text-decoration: underline;
+}
+.nav ul i {
+  padding-right: 0.25rem;
+}
+
+.content {
+  background-color: #f0f0f0;
+  height: 100vh;
+  overflow-y: scroll;
+  padding: 1rem;
+  width: 100%;
+}
